@@ -6,6 +6,16 @@ export const items = [
       icon: 'pi pi-fw pi-camera',
       url: '/skills/photography'
   },
+  {
+    label: 'Project Management',
+    icon: 'pi pi-fw pi-camera',
+    url: '/skills/project-management'
+},
+{
+  label: 'Interior Design',
+  icon: 'pi pi-fw pi-camera',
+  url: '/skills/interior-design'
+},
 ]
 export default function SkillsLayout({
     children,
