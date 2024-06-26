@@ -39,13 +39,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="px-4">
+        <div className="mx-auto px-6 max-w-4xl md:px-12">
 
         <Nav  items={items} />
         </div>
-        <div className="px-4 mx-auto">
-
-        {children}
+        <div className="mx-auto px-6 max-w-4xl md:px-12">
+          {children}
         </div>
         </body>
       

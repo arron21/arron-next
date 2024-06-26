@@ -51,7 +51,9 @@ export default function SkillsLayout({
     return (
       <section>
         <Nav items={items} />
+        <div className='p-1'>
         {children}
+        </div>
       </section>
     )
   }
