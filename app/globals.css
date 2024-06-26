@@ -31,3 +31,32 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.dictionary-list {
+  list-style: decimal;
+  margin-left: 30px;
+  li {
+
+    padding-top: 30px;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      &:before {
+        content: '';
+        opacity: 0;
+      }
+    }
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -22px;
+      top: 1.5em;
+      height: 70%;
+      width: 3px;
+      background-color: rgb(14 116 144 / 1);
+    }
+  }
+}
