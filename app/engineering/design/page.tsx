@@ -1,8 +1,10 @@
 export default function Page() {
   return (
     <main>
-      <h1  className="text-4xl">Design</h1>
-      <p>UI/UX expertise is essential for companies aiming to optimize user interactions and enhance digital experiences. Skilled UI/UX professionals combine design principles with user research to create intuitive interfaces that resonate with target audiences. They employ tools like Adobe XD, Sketch, and Figma to prototype and iterate designs efficiently, ensuring usability and visual appeal. By focusing on user-centric design, businesses can boost engagement, reduce bounce rates, and foster loyalty, driving conversions and sustaining competitive advantage in competitive markets.</p>
+      <h1  className="text-4xl my-8">Design</h1>
+      <p>Design as it pertains to engineering is a very broad topic. It can be as simple as a logo, as complex as a website, or as complex as an entire product.</p>
+      <p>My father once told me "anyone can learn how to code, but only an artist can truly make something new".</p>
+      <p>The world of web design is both fun and fascinating. Whether it's the contrasting design choices influenced by western and eastern cultures, the impact of color on the overall user experience, or the role of typography in shaping our perception, each element plays a crucial part in crafting a compelling digital presence.</p>
     </main>
   )
 }

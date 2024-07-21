@@ -1,8 +1,9 @@
 export default function Page() {
     return (
       <main>
-<h1 className="text-4xl">React</h1>
-        <p>React development is pivotal for enterprises seeking agile and high-performance web solutions. As a popular JavaScript library maintained by Facebook, React excels in creating interactive user interfaces with its component-based architecture and virtual DOM rendering. Skilled React developers harness its efficiency to build scalable applications that deliver exceptional user experiences. With React's extensive ecosystem and community support, businesses can innovate swiftly and stay ahead in dynamic markets, ensuring robust digital solutions that drive engagement and growth.</p>
+<h1 className="text-4xl my-8">React</h1>
+        <p>React... this website is built with React and Next.js.</p><p>I'll admit I am not a big fan or React. I just prefer the syntax of other frameworks like Angular, and Vue. React is still incredibly popular and probably will stay that way for a long time. I believe that it approaches frontend development in a way that that is just feels... strange. I will continue to use React, but I will always advocate for a different approach first.</p>
+        
       </main>
 
     )

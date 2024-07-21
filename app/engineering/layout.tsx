@@ -26,11 +26,6 @@ export const items = [
   icon: 'pi pi-fw pi-upload',
   url: '/engineering/ui-ux'
 },
-{
-  label: 'Soft Skills',
-  icon: 'pi pi-fw pi-upload',
-  url: '/engineering/soft-skills'
-},
   {
       label: 'Backend',
       icon: 'pi pi-fw pi-search',
@@ -50,7 +45,7 @@ export default function SkillsLayout({
   }) {
     return (
       <section>
-        <Nav items={items} />
+        {/* <Nav items={items} /> */}
         <div className='p-1'>
         {children}
         </div>

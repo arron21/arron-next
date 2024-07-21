@@ -1,9 +1,9 @@
 export default function Page() {
     return (
         <main>
-            <h1 className="text-4xl">Project Management</h1>
-            <p>My photography is often what catches my eye. The juxtaposition of nature and human made objects is what I find interesting. We build tall sky scrapers so we can see beyond the trees. We build televisions so we can watch birds inside of a box.</p>
-            <p>I try to capture the balance between our human existence and the existence of Earth itself.</p>
+            <h1 className="text-4xl my-8">Project Management</h1>
+            <p>I believe that project management has less to do with telling people what to, and more to do with people telling me what to do.</p>
+            <p>What I mean is that morale and teamwork are what really matter. Steve Jobs once said <strong>"If you want to hire great people and have them stay working for you, you have to let them make a lot of decisions, and you have to be run by ideas, not hierarchy"</strong>. I believe once you develop a culture of trust and respect, you can achieve great things.</p>
         </main>
     )
   }

@@ -11,11 +11,11 @@ export const items = [
     icon: 'pi pi-fw pi-camera',
     url: '/skills/project-management'
 },
-{
-  label: 'Interior Design',
-  icon: 'pi pi-fw pi-camera',
-  url: '/skills/interior-design'
-},
+// {
+//   label: 'Interior Design',
+//   icon: 'pi pi-fw pi-camera',
+//   url: '/skills/interior-design'
+// },
 ]
 export default function SkillsLayout({
     children,
@@ -23,11 +23,11 @@ export default function SkillsLayout({
     children: React.ReactNode
   }) {
     return (
-      <section>
-        <Nav items={items} />
+      <>
+        {/* <Nav items={items} /> */}
         <div className="p-1">
           {children}
         </div>
-      </section>
+      </>
     )
   }
