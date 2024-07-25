@@ -80,12 +80,19 @@ const components: { title: string; href: string; description: string }[] = [
 
 export default function TopNav() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="my-4">
       <NavigationMenuList>
       <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Home
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/portfolio" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Portfolio
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

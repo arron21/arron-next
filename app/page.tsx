@@ -14,7 +14,7 @@ export default function Home() {
         <li>
           <ol>
             <li>a human who makes websites</li>
-            <li>a guy engineers web applications</li>
+            <li>a guy who engineers web applications</li>
             <li>that person who can also do UI and UX</li>
           </ol>
           </li>
