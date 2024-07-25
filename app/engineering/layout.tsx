@@ -16,11 +16,11 @@ export const items = [
   icon: 'pi pi-fw pi-upload',
   url: '/engineering/react'
 },
-{
-  label: 'Vue',
-  icon: 'pi pi-fw pi-upload',
-  url: '/engineering/vue'
-},
+// {
+//   label: 'Vue',
+//   icon: 'pi pi-fw pi-upload',
+//   url: '/engineering/vue'
+// },
 {
   label: 'UI/UX',
   icon: 'pi pi-fw pi-upload',
@@ -45,8 +45,7 @@ export default function SkillsLayout({
   }) {
     return (
       <section>
-        {/* <Nav items={items} /> */}
-        <div className='p-1'>
+        <div className=''>
         {children}
         </div>
       </section>

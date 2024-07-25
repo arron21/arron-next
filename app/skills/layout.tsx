@@ -24,8 +24,7 @@ export default function SkillsLayout({
   }) {
     return (
       <>
-        {/* <Nav items={items} /> */}
-        <div className="p-1">
+        <div className="">
           {children}
         </div>
       </>

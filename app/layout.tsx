@@ -1,36 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import "./layout.css";
 
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import Nav from "./components/Nav/Nav";
 import TopNav from "./components/Nav/TopNav";
-
-import { AuroraBackground } from "./components/Nav/ui/aurora-background";
-import { motion } from "framer-motion";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import Link from "next/link";
-import GodRays from "./components/Nav/GodRays";
+import GodRays from "./components/GodRays/GodRays";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Arron McCrory",
+  title: "Arron McCrory - Web Developer",
   description: "A Web Developer",
 };
-
-
 
 export const items = [
   {
@@ -59,12 +42,10 @@ export default function RootLayout({
           
         <GodRays />
         <div className="mx-auto px-6 max-w-4xl md:px-12">
-
-        <TopNav />
-        {/* <Nav  items={items} /> */}
+          <TopNav />
         </div>
 
-        <div className="mx-auto px-6 max-w-4xl md:px-12 antialiased leading-7">
+        <div className=" mainContainer mx-auto px-6 max-w-4xl md:px-12 antialiased leading-7">
           {children}
         </div>
         </body>

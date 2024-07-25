@@ -1,6 +1,7 @@
-import React from 'react';
-import Image from "next/image";
+// "use client";
+import Email from './components/Email/Email';
 import './home.css';
+
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           </li>
         <li>individual who enjoys photography and video games and boxing</li>
       </ol>
+      <Email />
     </main>
   );
 }

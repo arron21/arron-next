@@ -37,13 +37,13 @@ export const engineeringItems = [
     description: 'An overly popular framework'
 
   },
-  {
-    label: 'Vue',
-    icon: 'pi pi-fw pi-upload',
-    url: '/engineering/vue',
-    description: 'A pretty cool framework'
+  // {
+  //   label: 'Vue',
+  //   icon: 'pi pi-fw pi-upload',
+  //   url: '/engineering/vue',
+  //   description: 'A pretty cool framework'
 
-  },
+  // },
   {
     label: 'UI/UX',
     icon: 'pi pi-fw pi-upload',
