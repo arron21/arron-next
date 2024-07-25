@@ -15,21 +15,6 @@ export const metadata: Metadata = {
   description: "A Web Developer",
 };
 
-export const items = [
-  {
-      label: 'Home',
-      url: '/',
-  },
-  {
-      label: 'Engineering',
-      url: '/engineering',
-  },
-  {
-    label: 'Skills',
-    url: '/skills',
-},
-];
-
 
 export default function RootLayout({
   children,
