@@ -7,6 +7,8 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 import TopNav from "./components/Nav/TopNav";
 import GodRays from "./components/GodRays/GodRays";
+import ConicBackground from "./components/ConicBackground/ConicBackground";
+import Metrics from "./components/Metrics/Metrics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +27,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
           
-        <GodRays />
         <div className="mx-auto px-6 max-w-4xl md:px-12">
           <TopNav />
         </div>
@@ -33,6 +34,8 @@ export default function RootLayout({
         <div className=" mainContainer mx-auto px-6 max-w-4xl md:px-12 antialiased leading-7">
           {children}
         </div>
+        <ConicBackground />
+        <Metrics />
         </body>
       
     </html>

@@ -1,0 +1,48 @@
+
+@property --a {
+	syntax: "<angle>";
+	inherits: false;
+	initial-value: 0deg;
+}
+
+.el-el {
+	background: repeating-linear-gradient(
+		100deg,
+		#f1fdd7 10%,
+		rgba(0, 0, 0, 0) 15%,
+		#e2e4d3 20%,
+		rgba(0, 0, 0, 0) 25%,
+		#f1fdd7 30%
+	);
+	background: conic-gradient(from var(--a), coral, dodgerblue, coral);
+
+	inset: 0;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	animation: slide 12s infinite linear;
+}
+
+.el-shade {
+	pointer-events: none;
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 50%
+	);
+	mix-blend-mode: plus-lighter;
+	z-index: 2;
+}
+.el-container {
+    z-index: -1;
+	position: fixed;
+	inset: 0;
+	animation: spin 13s infinite linear;
+}
+@keyframes slide {
+	100% {
+		--a: 360deg;
+	}
+}
