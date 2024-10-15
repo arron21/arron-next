@@ -16,7 +16,7 @@ export default function Email() {
 
   return (
     <div className="">
-      <form netlify data-netlify="true">
+      <form data-netlify="true">
         <Label htmlFor="email">Email</Label>
         <Input type="email" id="email" placeholder="smithers@gmail.com" />
         <Label htmlFor="name">Name</Label>
