@@ -13,8 +13,8 @@ export default function Page() {
     <main>
       <h1 className="text-4xl my-8">Web Applications</h1>
 
-      {sites.map((x) => (
-        <Link href={"/portfolio/web-applications/" + x.link}>
+      {sites.map((x, index) => (
+        <Link key={index} href={"/portfolio/web-applications/" + x.link}>
           <Button className="m-3" variant="outline">
             <ArrowRightIcon className="mr-2 h-4 w-4" /> {x.name}
           </Button>
