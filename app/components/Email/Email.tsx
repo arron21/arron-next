@@ -1,19 +1,30 @@
 "use client";
 
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import "./email.css";
 
 export default function Email() {
-    const [showEmail, setShowEmail] = useState(false);
-    
-    const revealEmailHandler = () => { 
-        setShowEmail(!showEmail);
-    }; 
+  const [showEmail, setShowEmail] = useState(false);
 
-    return (
-        <div className='flex flex-col items-center justify-center'>
-            {!showEmail ? <p className='pt-4 text-2xl'><button onClick={() => revealEmailHandler()} className='text-cyan-700 underline'>Contact Me</button></p>: null}
-            {showEmail ? <p className='pt-4 text-2xl'>My Email is <a className='text-cyan-700 underline' href="mailto:arronmccrory@gmail.com">arronmccrory@gmail.com</a></p>: ""}
-        </div>
-    )
-  }
+  const revealEmailHandler = () => {
+    setShowEmail(!showEmail);
+  };
+
+  return (
+    <div className="">
+      <form netlify data-netlify="true">
+        <Label htmlFor="email">Email</Label>
+        <Input type="email" id="email" placeholder="smithers@gmail.com" />
+        <Label htmlFor="name">Name</Label>
+        <Input type="text" id="name" placeholder="Mr. John Smith" />
+        <Label htmlFor="message">Your message</Label>
+        <Textarea placeholder="Type your message here." id="message" />
+        <Button className="mt-4">Send</Button>
+      </form>
+    </div>
+  );
+}

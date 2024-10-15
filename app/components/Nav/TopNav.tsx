@@ -14,6 +14,27 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
+export const portfolioItems = [
+  {
+    label: "Websites",
+    icon: "pi pi-fw pi-upload",
+    url: "/portfolio/websites",
+    description: "Perhaps a homepage for your dog?",
+  },
+  {
+    label: "Web Design",
+    icon: "pi pi-fw pi-upload",
+    url: "/portfolio/web-design",
+    description: "Pretty pixels",
+  },
+  {
+    label: "Web Applications",
+    icon: "pi pi-fw pi-upload",
+    url: "/portfolio/web-applications",
+    description: "Code and UX to the extreme",
+  },
+];
+
 export const engineeringItems = [
   {
     label: "Frontend",
@@ -83,11 +104,20 @@ export default function TopNav() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/portfolio" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Portfolio
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuTrigger>Portfolio</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {portfolioItems.map((component) => (
+                <ListItem
+                  key={component.label}
+                  title={component.label}
+                  href={component.url}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Engineering</NavigationMenuTrigger>
@@ -120,6 +150,13 @@ export default function TopNav() {
               ))}
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
