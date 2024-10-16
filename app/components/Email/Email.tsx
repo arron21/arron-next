@@ -14,16 +14,31 @@ export default function Email() {
     setShowEmail(!showEmail);
   };
 
+  const handleFormSubmit = async (event: any) => {
+    console.log("🚀 ~ handleFormSubmit ~ event:", event)
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    await fetch('/__forms.html', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(formData).toString()
+    });
+    // Success & error handling should come here
+  };
+
+
   return (
     <div className="">
-      <form data-netlify="true">
+      <form name="contact" onSubmit={handleFormSubmit}>
+        <input type="hidden" name="form-name" value="contact" />
+
         <Label htmlFor="email">Email</Label>
-        <Input type="email" id="email" placeholder="smithers@gmail.com" />
+        <Input name="email" type="email" id="email" placeholder="smithers@gmail.com" />
         <Label htmlFor="name">Name</Label>
-        <Input type="text" id="name" placeholder="Mr. John Smith" />
+        <Input name="name" type="text" id="name" placeholder="Mr. John Smith" />
         <Label htmlFor="message">Your message</Label>
-        <Textarea placeholder="Type your message here." id="message" />
-        <Button className="mt-4">Send</Button>
+        <Textarea name="message" placeholder="Type your message here." id="message" />
+        <Button type="submit" className="mt-4">Send</Button>
       </form>
     </div>
   );
