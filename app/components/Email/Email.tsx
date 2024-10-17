@@ -8,28 +8,24 @@ import { Textarea } from "@/components/ui/textarea";
 import "./email.css";
 
 export default function Email() {
-  const [showEmail, setShowEmail] = useState(false);
+  let [showThankYou, setShowThankYou] = useState(false);
 
-  const revealEmailHandler = () => {
-    setShowEmail(!showEmail);
-  };
 
   async function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
-    console.log("🚀 ~ handleFormSubmit ~ event:", event)
     event.preventDefault();
     const formData = new FormData(event.currentTarget)
-    console.log("🚀 ~ handleFormSubmit ~ formData:", formData.entries())
 
     try {
       const response = await fetch('__forms.html', {
         method: 'POST',
         body: formData,
       })
-      console.log('Form submitted:', response);
+      if(response.status === 200) {
+        setShowThankYou(true);
+      }
 
     } catch {
       console.error('Error submitting form:');
-
     }
     
   };
@@ -37,6 +33,14 @@ export default function Email() {
 
   return (
     <div className="">
+      {showThankYou && (
+        <div className="mt-4 text-center">
+          <h1 className="text-2xl">Thank you!</h1>
+          <p className="text-gray-500">
+            I will get back to you as soon as possible.
+          </p>
+        </div>
+      )}
       <form name="contact" onSubmit={handleFormSubmit}>
         <input type="hidden" name="form-name" value="contact" />
         <Label htmlFor="email">Email</Label>
