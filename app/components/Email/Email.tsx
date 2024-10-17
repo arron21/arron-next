@@ -19,9 +19,7 @@ export default function Email() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget)
     console.log("🚀 ~ handleFormSubmit ~ formData:", formData.entries())
-    for(let e of formData.entries()) {
-      console.log(e)
-    }
+
     const response = await fetch('__forms.html', {
       method: 'POST',
       body: formData,
