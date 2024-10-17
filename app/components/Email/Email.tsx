@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -14,20 +14,29 @@ export default function Email() {
     setShowEmail(!showEmail);
   };
 
-  const handleFormSubmit = async (event: any) => {
+  async function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
     console.log("🚀 ~ handleFormSubmit ~ event:", event)
     event.preventDefault();
-
-    const form = event.target;
-    console.log("🚀 ~ handleFormSubmit ~ form:", form)
-    const data = new FormData(form); 
+    const formData = new FormData(event.currentTarget)
+    console.log("🚀 ~ handleFormSubmit ~ formData:", formData.entries())
+    for(let e of formData.entries()) {
+      console.log(e)
+    }
+    const response = await fetch('__forms.html', {
+      method: 'POST',
+      body: formData,
+    })
+    const data = await response.json()
     console.log("🚀 ~ handleFormSubmit ~ data:", data)
+
+ 
+    return;
 
     // Now you can send `formData` or `plainFormData` to your API
     try {
       const response = await fetch('/__forms.html', {
         method: 'POST',
-        body: data, // Or body: JSON.stringify(plainFormData)
+        // body: data, // Or body: JSON.stringify(plainFormData)
       });
 
       // Handle response from API
