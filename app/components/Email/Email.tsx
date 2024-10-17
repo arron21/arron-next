@@ -20,28 +20,18 @@ export default function Email() {
     const formData = new FormData(event.currentTarget)
     console.log("🚀 ~ handleFormSubmit ~ formData:", formData.entries())
 
-    const response = await fetch('__forms.html', {
-      method: 'POST',
-      body: formData,
-    })
-    const data = await response.json()
-    console.log("🚀 ~ handleFormSubmit ~ data:", data)
-
- 
-    return;
-
-    // Now you can send `formData` or `plainFormData` to your API
     try {
-      const response = await fetch('/__forms.html', {
+      const response = await fetch('__forms.html', {
         method: 'POST',
-        // body: data, // Or body: JSON.stringify(plainFormData)
-      });
-
-      // Handle response from API
+        body: formData,
+      })
       console.log('Form submitted:', response);
-    } catch (error) {
-      console.error('Error submitting form:', error);
+
+    } catch {
+      console.error('Error submitting form:');
+
     }
+    
   };
 
 
