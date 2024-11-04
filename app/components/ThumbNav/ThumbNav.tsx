@@ -105,7 +105,7 @@ export default function ThumbNav() {
                 {engineeringItems.map((item, index) => (
                   <li key={item.url} className={`pt-2 animate-fade-slide delay-${index * 100}`}>
                     <a href={item.url} className="text-xl text-gray-400 hover:text-gray-200 transition-colors">{item.label}</a>
-                    <p className="text-sm text-gray-500">{item.description}</p>
+                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                   </li>
                 ))}
               </ul>
