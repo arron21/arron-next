@@ -7,8 +7,7 @@ import "./layout.css";
 
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 
-import TopNav from "./components/Nav/TopNav";
-import GodRays from "./components/GodRays/GodRays";
+import ThumbNav from "./components/ThumbNav/ThumbNav";
 import ConicBackground from "./components/ConicBackground/ConicBackground";
 import Metrics from "./components/Metrics/Metrics";
 
@@ -28,15 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="mx-auto px-6 max-w-4xl md:px-12">
-          <TopNav />
-        </div>
 
         <div
-          className={"mainContainer mx-auto px-6 max-w-4xl md:px-12 antialiased leading-7 "}
+          className={"mainContainer mx-auto py-6 px-6 max-w-4xl md:px-12 antialiased leading-7 "}
         >
           {children}
         </div>
+        <ThumbNav />
         <ConicBackground />
         <Metrics />
       </body>

@@ -7,6 +7,9 @@ export default function PortfolioItem(props: any) {
       {props.image && (
         <a href={props.link}>
         <Image
+           width={16}        
+           height={9}
+          layout="responsive"
           src={props.image}
           alt="{props.alt}"
           className="shadow-xl w-full h-full rounded-lg"
