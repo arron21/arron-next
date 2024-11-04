@@ -12,7 +12,7 @@ const portfolioItems = [
 const engineeringItems = [
   { label: "Frontend", url: "/engineering/frontend", description: "The stuff you do see" },
   { label: "Angular", url: "/engineering/angular", description: "An amazing framework" },
-  { label: "React", url: "/engineering/react", description: "An overly popular framework" },
+  { label: "React", url: "/engineering/react", description: "A popular framework" },
   { label: "UI/UX", url: "/engineering/ui-ux", description: "More than just colors and fonts" },
   { label: "Backend", url: "/engineering/backend", description: "The stuff you don't see" },
   { label: "Design", url: "/engineering/design", description: "A process that connects all pieces of a goal" },
