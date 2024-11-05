@@ -155,3 +155,18 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; /* Color when hovering over the scrollbar handle */
 }
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); /* Slide in from left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-slide {
+  animation: fadeSlide 0.3s ease forwards; /* Adjust duration as needed */
+}

@@ -1,4 +1,3 @@
-// components/ThumbNav.js
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -10,13 +9,13 @@ const portfolioItems = [
 ];
 
 const engineeringItems = [
-  { label: "Frontend", url: "/engineering/frontend", description: "The stuff you do see" },
-  { label: "Angular", url: "/engineering/angular", description: "An amazing framework" },
-  { label: "React", url: "/engineering/react", description: "A popular framework" },
-  { label: "UI/UX", url: "/engineering/ui-ux", description: "More than just colors and fonts" },
-  { label: "Backend", url: "/engineering/backend", description: "The stuff you don't see" },
-  { label: "Design", url: "/engineering/design", description: "A process that connects all pieces of a goal" },
-  { label: "Project Management", url: "/engineering/project-management", description: "Ideas over hierarchy." },
+  { label: "Frontend", url: "/engineering/frontend" },
+  { label: "Angular", url: "/engineering/angular" },
+  { label: "React", url: "/engineering/react" },
+  { label: "UI/UX", url: "/engineering/ui-ux" },
+  { label: "Backend", url: "/engineering/backend" },
+  { label: "Design", url: "/engineering/design" },
+  { label: "Project Management", url: "/engineering/project-management" },
 ];
 
 export default function ThumbNav() {
@@ -88,19 +87,20 @@ export default function ThumbNav() {
             {linksVisible && (
               <button
                 onClick={toggleEngineering}
-                className="text-2xl font-bold w-full text-left text-gray-300 hover:text-white transition-colors animate-fade-slide"
+                className="text-3xl font-bold w-full text-left text-gray-300 hover:text-white transition-colors animate-fade-slide"
               >
                 Skills
               </button>
             )}
             <ul
-              className={`pl-4 space-y-4 border-l-2 border-gray-700 transition-all duration-300 ease-in-out ${isEngineeringOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+              className={`space-y-4  transition-all duration-300 ease-in-out ${isEngineeringOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
             >
               {engineeringItems.map((item, index) => (
                 linksVisible && (
                   <li key={item.url} className={`pt-2 animate-fade-slide delay-${index * 100}`}>
-                    <a href={item.url} className="text-xl text-gray-400 hover:text-gray-200 transition-colors">{item.label}</a>
-                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                    <a href={item.url} className="block text-xl text-gray-400 hover:text-gray-200 transition-colors w-full text-left">
+                      {item.label}
+                    </a>
                   </li>
                 )
               ))}
