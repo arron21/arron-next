@@ -40,6 +40,18 @@ const SocialLinks: React.FC = () => {
         </svg>
         
       </a>
+
+
+<a href="https://wellfound.com/u/arron-mccrory" className="flex items-center mx-4 text-gray-600 hover:text-indigo-800 transition-colors">
+<svg fill="currentColor" viewBox="0 0 554.89997 266.70002" width="32"><path d="M 80.9,263.59999 0,2.9999988 H 75.3 L 123,190.39999 174.9,2.9999988 h 75.5 L 302.3,190.39999 350,2.9999988 h 75.3 L 343.5,263.59999 H 263.3 L 212.7,75.399999 161.1,263.59999 H 80.9 Z"></path><circle cx="511.09995" cy="222.89999" fill="currentColor" r="43.799999"></circle><circle cx="511.09995" cy="43.799999" fill="currentColor" r="43.799999"></circle></svg>
+</a>
+<a href="https://drive.google.com/file/d/1J54DO1ikCNTg_w7vj6JgS-NcXDh6X-K-/view?usp=drive_link" className="flex items-center mx-4 text-gray-600 hover:text-indigo-800 transition-colors">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"         height="32" 
+          width="32"  viewBox="-8 0 32 32" version="1.1">
+<title>paper</title>
+<path d="M13.52 5.72h-7.4c-0.36 0-0.56 0.2-0.6 0.24l-5.28 5.28c-0.040 0.040-0.24 0.24-0.24 0.56v12.2c0 1.24 1 2.24 2.24 2.24h11.24c1.24 0 2.24-1 2.24-2.24v-16.040c0.040-1.24-0.96-2.24-2.2-2.24zM5.28 8.56v1.8c0 0.32-0.24 0.56-0.56 0.56h-1.84l2.4-2.36zM14.080 24.040c0 0.32-0.28 0.56-0.56 0.56h-11.28c-0.32 0-0.56-0.28-0.56-0.56v-11.36h3.040c1.24 0 2.24-1 2.24-2.24v-3.040h6.52c0.32 0 0.56 0.24 0.56 0.56l0.040 16.080z"/>
+</svg></a>
     </section>
   );
 };
