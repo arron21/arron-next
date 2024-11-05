@@ -7,6 +7,7 @@ import LogoCarousel from './components/LogoCarousel/LogoCarousel';
 import Experience from './components/Experience/Experience';
 import SocialLinks from './components/SocialLinks/SocialLink';
 import Link from 'next/link';
+import GreetingSVG from './components/GreetingSVG/GreetingSVG';
 
 export default function HomeHero() {
   return (
@@ -14,14 +15,7 @@ export default function HomeHero() {
       <div className="text-center max-w-4xl">
         
         {/* Animated Greeting */}
-        <svg width="100%" height="200" viewBox="0 0 800 200" className="mx-auto">
-          <text x="50%" y="50%" fontSize="80" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fill="none" stroke="#6366f1" strokeWidth="2" className="animated-text">
-            Hello, I’m Arron
-          </text>
-          <text x="50%" y="50%" fontSize="80" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fill="#6366f1" className="filled-text">
-            Hello, I’m Arron
-          </text>
-        </svg>
+        <GreetingSVG />
 
         {/* Professional Title */}
         <p className="text-2xl md:text-3xl font-light text-gray-700 mt-4 animate-fade-in delay-100">
