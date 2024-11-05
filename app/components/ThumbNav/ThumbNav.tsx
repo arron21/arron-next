@@ -23,6 +23,7 @@ export default function ThumbNav() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
   const [isEngineeringOpen, setIsEngineeringOpen] = useState(false);
+  const [linksVisible, setLinksVisible] = useState(false); // New state for link visibility
 
   const toggleNav = () => {
     setIsNavOpen((prev) => !prev);
@@ -40,6 +41,13 @@ export default function ThumbNav() {
 
   useEffect(() => {
     document.body.classList.toggle("no-scroll", isNavOpen);
+    if (isNavOpen) {
+      setLinksVisible(false); // Reset link visibility when opening the nav
+      const timer = setTimeout(() => {
+        setLinksVisible(true); // Show links after overlay fades in
+      }, 300); // Adjust this duration to match the overlay fade-in time
+      return () => clearTimeout(timer);
+    }
     return () => document.body.classList.remove("no-scroll");
   }, [isNavOpen]);
 
@@ -54,65 +62,52 @@ export default function ThumbNav() {
       </button>
 
       {/* Fullscreen navigation overlay with blur effect */}
-      {isNavOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-lg flex flex-col items-center justify-center text-white z-40 overflow-y-auto p-6">
-          <div className="text-left max-w-lg w-full">
-            {/* Home Link */}
+      <div className={`fixed inset-0 bg-black bg-opacity-80 backdrop-blur-lg flex flex-col items-center justify-center text-white z-40 overflow-y-auto p-6 transition-opacity duration-300 ease-in-out ${isNavOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} transform ${isNavOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className="text-left max-w-lg w-full">
+          {/* Home Link */}
+          {linksVisible && (
             <div className="mb-8 animate-fade-slide">
               <a href="/" className="text-3xl font-extrabold tracking-wide text-gray-200 hover:text-white transition-colors">
                 Home
               </a>
             </div>
+          )}
 
-            {/* Contact Link */}
+          {/* Contact Link */}
+          {linksVisible && (
             <div className="mb-8 animate-fade-slide delay-100">
               <a href="/contact" className="text-3xl font-extrabold tracking-wide text-gray-200 hover:text-white transition-colors">
                 Contact
               </a>
             </div>
+          )}
 
-            {/* Portfolio Dropdown */}
-            <div className="mb-6">
-              <button
-                onClick={togglePortfolio}
-                className="text-2xl font-bold w-full text-left text-gray-300 hover:text-white transition-colors"
-              >
-                Portfolio
-              </button>
-              <ul
-                className={`pl-4 space-y-4 border-l-2 border-gray-700 transition-all duration-300 ease-in-out ${isPortfolioOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
-              >
-                {portfolioItems.map((item, index) => (
-                  <li key={item.url} className={`pt-2 animate-fade-slide delay-${index * 100}`}>
-                    <a href={item.url} className="text-xl text-gray-400 hover:text-gray-200 transition-colors">{item.label}</a>
-                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Engineering Dropdown */}
-            <div>
+          {/* Engineering Dropdown */}
+          <div>
+            {/* Skills Button */}
+            {linksVisible && (
               <button
                 onClick={toggleEngineering}
-                className="text-2xl font-bold w-full text-left text-gray-300 hover:text-white transition-colors"
+                className="text-2xl font-bold w-full text-left text-gray-300 hover:text-white transition-colors animate-fade-slide"
               >
                 Skills
               </button>
-              <ul
-                className={`pl-4 space-y-4 border-l-2 border-gray-700 transition-all duration-300 ease-in-out ${isEngineeringOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
-              >
-                {engineeringItems.map((item, index) => (
+            )}
+            <ul
+              className={`pl-4 space-y-4 border-l-2 border-gray-700 transition-all duration-300 ease-in-out ${isEngineeringOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+            >
+              {engineeringItems.map((item, index) => (
+                linksVisible && (
                   <li key={item.url} className={`pt-2 animate-fade-slide delay-${index * 100}`}>
                     <a href={item.url} className="text-xl text-gray-400 hover:text-gray-200 transition-colors">{item.label}</a>
                     <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                   </li>
-                ))}
-              </ul>
-            </div>
+                )
+              ))}
+            </ul>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }

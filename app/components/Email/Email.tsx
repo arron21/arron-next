@@ -44,11 +44,11 @@ export default function Email() {
       <form name="contact" onSubmit={handleFormSubmit}>
         <input type="hidden" name="form-name" value="contact" />
         <Label htmlFor="email">Email</Label>
-        <Input name="email" type="email" id="email" placeholder="smithers@gmail.com" />
+        <Input name="email" type="email" id="email" placeholder="" />
         <Label htmlFor="name">Name</Label>
-        <Input name="name" type="text" id="name" placeholder="Mr. John Smith" />
+        <Input name="name" type="text" id="name" placeholder="" />
         <Label htmlFor="message">Your message</Label>
-        <Textarea name="message" placeholder="Type your message here." id="message" />
+        <Textarea name="message" placeholder="" id="message" />
         <Button type="submit" className="mt-4">Send</Button>
       </form>
     </div>

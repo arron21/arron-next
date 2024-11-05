@@ -1,18 +1,14 @@
+import TextPage from "@/app/components/TextPage/TextPage";
+
 export default function Page() {
   return (
-    <main>
-      <h1 className="text-4xl my-8">UI/UX</h1>
-      <p>
-        UI/UX might be the most controversial aspect of engineering. Generally,
-        it is left as an afterthought in the engineering process.
-      </p>
-      <p>
-        Some people might even think that UI and UX are the same thing. However,
-        you could have a UX expert who creates an awful-looking UI, while the
-        overall user experience remains top-tier. Personally, my strengths shine
-        more on the UX side of things, though I do enjoy designing UI from time
-        to time.
-      </p>
-    </main>
+    <TextPage
+      title="UI/UX"
+      paragraphs={[
+        "UI/UX is a crucial and dynamic aspect of engineering that can greatly influence the success of a product. Rather than being an afterthought, a well-thought-out design process should be integrated throughout development to create a seamless experience for users.",
+        
+        "It's important to understand that UI and UX, while closely related, are distinct disciplines. A strong UX designer focuses on the overall experience, ensuring that users can navigate and engage with a product effortlessly. However, this does not mean that visual design is less important; an aesthetically pleasing UI can enhance user satisfaction and engagement. I thrive in creating user experiences, but I also enjoy the challenge of designing intuitive and appealing interfaces when the opportunity arises."
+      ]}
+    />
   );
 }

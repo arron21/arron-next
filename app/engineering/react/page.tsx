@@ -1,30 +1,16 @@
+import TextPage from "@/app/components/TextPage/TextPage";
+
 export default function Page() {
   return (
-    <main>
-      <h1 className="text-4xl my-8">React</h1>
-      <p>React... this website is built with React and Next.js.</p>
-      <p>
-        I&apos;ll admit I am not a big fan of React. I prefer the syntax of
-        other frameworks like Angular and Vue. React is still incredibly popular
-        and will probably remain so for a long time. I believe it approaches
-        frontend development in a way drifts too far from traditional
-        development standards. I feel JSX is the main culprit here; the approach
-        of bringing HTML into JavaScript is not as elegant as bringing
-        JavaScript into HTML. While I will continue to use React, I will always
-        advocate for a different approach first.
-      </p>
-      <p>
-        Personal opinions aside I also have some simple professional opinions. I
-        believe React.js is for more junior oriented developers. Part of the
-        reason it is so hugely popular is because it doesn't have as steep of a
-        learning curve as Angular. Angular and React came out around the same
-        time. React forces users to rely on third party libraries for
-        functionality while Angular has core functionality covered out of the
-        box. I trust that Google is going to maintain their libraries which as a
-        professional is very important to me. There is no guarentee that
-        libraries like react-router by Remix (as popular as it may be) are going
-        to me maintained 10 years from now.
-      </p>
-    </main>
+    <TextPage
+      title="React"
+      paragraphs={[
+        "React is the foundation of this website, built with React and Next.js, showcasing its versatility and performance.",
+        
+        "While I personally find the syntax of frameworks like Angular and Vue more to my liking, I recognize that React has gained immense popularity for a reason. Its unique approach to frontend development offers a flexible way to create user interfaces, making it a favorite among many developers. JSX, while different from traditional HTML structure, allows for a powerful and dynamic rendering of components that can lead to exciting possibilities in web development.",
+        
+        "As I continue to work with React, I appreciate its strengths, particularly its vibrant ecosystem and community support. While it may have a gentler learning curve compared to Angular, this accessibility has opened doors for many aspiring developers to enter the world of frontend development. Moreover, the flexibility React offers in integrating third-party libraries empowers developers to build tailored solutions. I believe that both React and Angular have their unique advantages, and I look forward to leveraging the best of both in my projects."
+      ]}
+    />
   );
 }

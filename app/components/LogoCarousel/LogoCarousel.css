@@ -1,0 +1,14 @@
+.carousel-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    gap: 2rem; /* Adjust spacing between logos */
+    padding: 2rem;
+    background-color: #f9f9f9; /* Optional: a subtle background color */
+  }
+  
+  .carousel-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

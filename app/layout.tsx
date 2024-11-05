@@ -28,11 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
 
-        <div
-          className={"mainContainer mx-auto py-6 px-6 max-w-4xl md:px-12 antialiased leading-7 "}
-        >
+        <div className="mainContainer mx-auto py-6 px-4 sm:px-6 md:px-8 lg:px-12 max-w-4xl antialiased leading-7">
           {children}
         </div>
+
         <ThumbNav />
         <ConicBackground />
         <Metrics />
