@@ -45,7 +45,7 @@ const SocialLinks: React.FC = () => {
 <a href="https://wellfound.com/u/arron-mccrory" className="flex items-center mx-4 text-gray-600 hover:text-indigo-800 transition-colors">
 <svg fill="currentColor" viewBox="0 0 554.89997 266.70002" width="32"><path d="M 80.9,263.59999 0,2.9999988 H 75.3 L 123,190.39999 174.9,2.9999988 h 75.5 L 302.3,190.39999 350,2.9999988 h 75.3 L 343.5,263.59999 H 263.3 L 212.7,75.399999 161.1,263.59999 H 80.9 Z"></path><circle cx="511.09995" cy="222.89999" fill="currentColor" r="43.799999"></circle><circle cx="511.09995" cy="43.799999" fill="currentColor" r="43.799999"></circle></svg>
 </a>
-<a href="https://drive.google.com/file/d/1J54DO1ikCNTg_w7vj6JgS-NcXDh6X-K-/view?usp=drive_link" className="flex items-center mx-4 text-gray-600 hover:text-indigo-800 transition-colors">
+<a href="https://docs.google.com/document/d/1M1YJs4lePV7VkBOMQuWYUardPQqvpTrGbppKsocG-g0/edit?usp=sharing" className="flex items-center mx-4 text-gray-600 hover:text-indigo-800 transition-colors">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"         height="32" 
           width="32"  viewBox="-8 0 32 32" version="1.1">
