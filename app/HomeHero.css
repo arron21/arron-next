@@ -8,7 +8,8 @@
 .filled-text {
   font-family: sans-serif;
   fill-opacity: 0;
-  animation: fill 1.5s ease forwards .4s; /* Starts after draw animation completes */
+  animation: fill 1.5s ease forwards
+    0.4s; /* Starts after draw animation completes */
 }
 
 @keyframes draw {

@@ -11,8 +11,8 @@ export default function Page() {
     <main>
       <h1 className="text-4xl my-8">AM Web</h1>
       <p>
-        AM Web was one of my early personal agency website templates I made.
-        AM, or Arron McCrory and web...
+        AM Web was one of my early personal agency website templates I made. AM,
+        or Arron McCrory and web...
       </p>
       <p>
         Inpsired by the{" "}

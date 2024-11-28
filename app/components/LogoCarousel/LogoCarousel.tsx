@@ -1,6 +1,6 @@
 // components/LogoCarousel.tsx
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const logos: { src: string; alt: string }[] = [
   { src: "/images/bank-of-america.svg", alt: "Bank of America Logo" },

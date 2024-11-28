@@ -80,7 +80,6 @@ p {
   margin: 1em 0;
 }
 
-
 .no-scroll {
   overflow: hidden;
 }
@@ -96,7 +95,7 @@ p {
       transform: translateY(0);
     }
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 0.5s ease forwards;
   }
@@ -134,7 +133,6 @@ p {
 .animate-fade-slide {
   animation: fadeSlideIn 0.3s ease-in forwards;
 }
-
 
 /* For WebKit browsers */
 ::-webkit-scrollbar {

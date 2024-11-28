@@ -12,7 +12,7 @@ export default function Page() {
         "Our devices are becoming faster and more power-efficient, allowing for richer user experiences.",
         "In this age of cloud computing, I recognize the importance of a balanced approach between frontend and backend.",
         "As a fullstack developer, I thrive on this balance, always looking for ways to leverage both sides to create seamless, high-performance applications.",
-      ]}      
+      ]}
     />
   );
 }

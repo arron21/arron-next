@@ -6,14 +6,14 @@ export default function PortfolioItem(props: any) {
       {props.title && <h3 className="text-2xl font-bold">{props.title}</h3>}
       {props.image && (
         <a href={props.link}>
-        <Image
-           width={16}        
-           height={9}
-          layout="responsive"
-          src={props.image}
-          alt="{props.alt}"
-          className="shadow-xl w-full h-full rounded-lg"
-        />
+          <Image
+            width={16}
+            height={9}
+            layout="responsive"
+            src={props.image}
+            alt="{props.alt}"
+            className="shadow-xl w-full h-full rounded-lg"
+          />
         </a>
       )}
     </div>

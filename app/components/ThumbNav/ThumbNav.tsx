@@ -1,11 +1,24 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const portfolioItems = [
-  { label: "Websites", url: "/portfolio/websites", description: "Perhaps a homepage for your dog?" },
-  { label: "Web Design", url: "/portfolio/web-design", description: "Pretty pixels" },
-  { label: "Web Applications", url: "/portfolio/web-applications", description: "Code and UX to the extreme" },
+  {
+    label: "Websites",
+    url: "/portfolio/websites",
+    description: "Perhaps a homepage for your dog?",
+  },
+  {
+    label: "Web Design",
+    url: "/portfolio/web-design",
+    description: "Pretty pixels",
+  },
+  {
+    label: "Web Applications",
+    url: "/portfolio/web-applications",
+    description: "Code and UX to the extreme",
+  },
 ];
 
 const engineeringItems = [
@@ -57,27 +70,52 @@ export default function ThumbNav() {
         onClick={toggleNav}
         className="fixed bottom-5 right-5 bg-gray-800 text-white px-6 py-3 rounded-full shadow-lg z-50 text-lg font-semibold hover:bg-gray-700 transition-all"
       >
-        {isNavOpen ? 'Close Menu' : 'Menu'}
+        {isNavOpen ? "Close Menu" : "Menu"}
       </button>
 
       {/* Fullscreen navigation overlay with blur effect */}
-      <div className={`fixed inset-0 bg-black bg-opacity-80 backdrop-blur-lg flex flex-col items-center justify-center text-white z-40 overflow-y-auto p-6 transition-opacity duration-300 ease-in-out ${isNavOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} transform ${isNavOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-80 backdrop-blur-lg flex flex-col items-center justify-center text-white z-40 overflow-y-auto p-6 transition-opacity duration-300 ease-in-out ${
+          isNavOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        } transform ${isNavOpen ? "translate-y-0" : "-translate-y-full"}`}
+      >
         <div className="text-left max-w-lg w-full">
           {/* Home Link */}
           {linksVisible && (
             <div className="mb-8 animate-fade-slide">
-              <a href="/" className="text-3xl font-extrabold tracking-wide text-gray-200 hover:text-white transition-colors">
+              <Link
+                href="/"
+                className="text-3xl font-extrabold tracking-wide text-gray-200 hover:text-white transition-colors"
+                onClick={toggleNav}
+              >
                 Home
-              </a>
+              </Link>
+            </div>
+          )}
+
+          {/* About Link */}
+          {linksVisible && (
+            <div className="mb-8 animate-fade-slide">
+              <Link
+                href="/about"
+                className="text-3xl font-extrabold tracking-wide text-gray-200 hover:text-white transition-colors"
+                onClick={toggleNav}
+              >
+                About
+              </Link>
             </div>
           )}
 
           {/* Contact Link */}
           {linksVisible && (
             <div className="mb-8 animate-fade-slide delay-100">
-              <a href="/contact" className="text-3xl font-extrabold tracking-wide text-gray-200 hover:text-white transition-colors">
+              <Link
+                href="/contact"
+                className="text-3xl font-extrabold tracking-wide text-gray-200 hover:text-white transition-colors"
+                onClick={toggleNav}
+              >
                 Contact
-              </a>
+              </Link>
             </div>
           )}
 
@@ -93,14 +131,25 @@ export default function ThumbNav() {
               </button>
             )}
             <ul
-              className={`space-y-4  transition-all duration-300 ease-in-out ${isEngineeringOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+              className={`space-y-4  transition-all duration-300 ease-in-out ${
+                isEngineeringOpen
+                  ? "max-h-screen opacity-100"
+                  : "max-h-0 opacity-0 overflow-hidden"
+              }`}
             >
               {engineeringItems.map((item, index) => (
                 linksVisible && (
-                  <li key={item.url} className={`pt-2 animate-fade-slide delay-${index * 100}`}>
-                    <a href={item.url} className="block text-xl text-gray-400 hover:text-gray-200 transition-colors w-full text-left">
+                  <li
+                    key={item.url}
+                    className={`pt-2 animate-fade-slide delay-${index * 100}`}
+                  >
+                    <Link
+                      href={item.url}
+                      className="block text-xl text-gray-400 hover:text-gray-200 transition-colors w-full text-left"
+                      onClick={toggleNav}
+                    >
                       {item.label}
-                    </a>
+                    </Link>
                   </li>
                 )
               ))}

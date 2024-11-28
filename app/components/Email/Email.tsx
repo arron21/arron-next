@@ -10,26 +10,22 @@ import "./email.css";
 export default function Email() {
   let [showThankYou, setShowThankYou] = useState(false);
 
-
   async function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(event.currentTarget);
 
     try {
-      const response = await fetch('__forms.html', {
-        method: 'POST',
+      const response = await fetch("__forms.html", {
+        method: "POST",
         body: formData,
-      })
-      if(response.status === 200) {
+      });
+      if (response.status === 200) {
         setShowThankYou(true);
       }
-
     } catch {
-      console.error('Error submitting form:');
+      console.error("Error submitting form:");
     }
-    
-  };
-
+  }
 
   return (
     <div className="">
