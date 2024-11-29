@@ -44,9 +44,10 @@ export default function HomeHero() {
               "Fullstack Web Developer",
               "Friendly Neighborhood Tech Guy",
               "Boxing Fan",
-
               "Frontend Web Dev Expert",
+              "Musician",
               "Tech Enthusiast",
+              "Gamer"
             ]}
             typeSpeed={40}
             backSpeed={20}
