@@ -106,6 +106,20 @@ export default function ThumbNav() {
             </div>
           )}
 
+
+          {/* Contact Link */}
+          {linksVisible && (
+            <div className="mb-8 animate-fade-slide delay-100">
+              <Link
+                href="/photography"
+                className="text-3xl font-extrabold tracking-wide text-gray-200 hover:text-white transition-colors"
+                onClick={toggleNav}
+              >
+                Photography
+              </Link>
+            </div>
+          )}
+
           {/* Contact Link */}
           {linksVisible && (
             <div className="mb-8 animate-fade-slide delay-100">
