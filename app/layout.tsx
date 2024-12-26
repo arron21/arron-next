@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Questrial } from "next/font/google";
 import { Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import "./layout.css";
@@ -9,7 +9,7 @@ import ThumbNav from "./components/ThumbNav/ThumbNav";
 import ConicBackground from "./components/ConicBackground/ConicBackground";
 import Metrics from "./components/Metrics/Metrics";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Questrial({ subsets: ["latin"], weight: '400' });
 const source_serif_4 = Source_Serif_4({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
